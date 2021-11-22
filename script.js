@@ -28,9 +28,9 @@ function playRound(playerSelection, computerSelection) {
         return "Tie game!";
     }
 
-    else if ((p == 'r' && c == 'p')
-        || (p == 'p' && c == 's')
-        || (p == 's' && c == 'r')) {
+    else if ((p == 'r' && c == 'p') ||
+        (p == 'p' && c == 's') ||
+        (p == 's' && c == 'r')) {
         return `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
 
@@ -46,6 +46,7 @@ function game() {
     const NUM_ROUNDS = 5;
 
     for (i = 0; i < NUM_ROUNDS; i++) {
-        console.log(playRound(prompt("Rock/Paper/Scissors?"), computerPlay()));
+        console.log(playRound(prompt("Rock/Paper/Scissors?"),
+            computerPlay()));
     }
 }
